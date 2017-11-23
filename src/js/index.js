@@ -46,7 +46,7 @@
 
     forum.base.getForumDefaultPage = function () {
         $.get('../forumMonitor/incrementTotal.html','',function (result) {
-            document.getElementById('content_wrap').innerHTML = result;
+            $('#content_wrap').empty().append($(result));
         }, 'html');
     }
 })();

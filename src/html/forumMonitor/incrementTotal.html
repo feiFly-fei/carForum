@@ -1,5 +1,9 @@
-<link rel="stylesheet" href="../../assets/swiper/swiper.min.css">
-<script src="../../assets/swiper/swiper.min.js"></script>
+<link rel="stylesheet" href="../../assets/swiper/css/swiper.min.css">
+<script src="../../assets/swiper/js/swiper.js"></script>
+
+<link rel="stylesheet" href="../../assets/icheck/flat/blue.css">
+<script src="../../assets/icheck/icheck.min.js"></script>
+
 <div class="incrementTotal">
     <h4 class="page-title">增量总比</h4>
     <div class="search-box">
@@ -13,7 +17,8 @@
                     <li>自定义时间</li>
                 </ul>
             </div>
-
+        </div>
+        <div class="row">
             <div class="col-md-1 text">终端</div>
             <div class="col-md-11">
                 <ul class="search-list">
@@ -21,34 +26,51 @@
                     <li>PC</li><li>移动</li><li>APP</li>
                 </ul>
             </div>
-            <div class="col-md-12">
+        </div>
+        <div class="row">
+            <div class="col-md-1 text">排水</div>
+            <div class="col-md-11">
                 <ul class="search-list">
                     <li class="selected">排水前</li><li>排水后</li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="img-box"><img src="../../images/autohome_logo.png" alt=""></div>
-                <div class="radio-box"><input type="radio"></div>
+    <div class="brand-select-box">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="img-box"><img src="../../images/chequ_logo.png" alt=""></div>
+                    <div class="checkbox-box"><input type="checkbox" class="checkbox"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box"><img src="../../images/autohome_logo.png" alt=""></div>
+                    <div class="checkbox-box"><input type="checkbox" class="checkbox"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box"><img src="../../images/pcauto_logo.png" alt=""></div>
+                    <div class="checkbox-box"><input type="checkbox" class="checkbox"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box"><img src="../../images/xcar_logo.png" alt=""></div>
+                    <div class="checkbox-box"><input type="checkbox" class="checkbox"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box"><img src="../../images/chelun_logo.png" alt=""></div>
+                    <div class="checkbox-box"><input type="checkbox" class="checkbox"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box"><img src="../../images/yiche_logo.png" alt=""></div>
+                    <div class="checkbox-box"><input type="checkbox" class="checkbox"></div>
+                </div>
             </div>
-            <div class="swiper-slide">
-                <div class="img-box"><img src="../../images/pcauto_logo.png" alt=""></div>
-                <div class="radio-box"><input type="radio"></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="img-box"><img src="../../images/xcar_logo.png" alt=""></div>
-                <div class="radio-box"><input type="radio"></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="img-box"><img src="../../images/chelun_logo.png" alt=""></div>
-                <div class="radio-box"><input type="radio"></div>
-            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+
+        <div class="btn-box text-center">
+            <button class="btn btn-default btn-blue btn-big">对比</button>
+        </div>
     </div>
 </div>
 <script src="../../js/forumMonitor/incrementTotal.js"></script>

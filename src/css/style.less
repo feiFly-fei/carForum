@@ -13,6 +13,8 @@ ul, li{
   list-style: none;
 }
 
+@color-blue: #3384ff;
+
 .main{
   width: 100%;
   height: 100%;
@@ -216,10 +218,19 @@ ul, li{
 
       .search-box{
         margin: auto 45px;
+        padding:0 15px;
         border: 1px solid #ddd;
 
+        .row>div{
+          border-bottom: 1px dashed #ddd;
+        }
+
+        .row:last-child>div{
+          border-bottom:none;
+        }
+
         .text{
-          line-height: 50px;
+          padding: 15px 0;
           color: #808080;
           text-align: center;
         }
@@ -228,7 +239,14 @@ ul, li{
 
           li{
             display: inline-block;
-            padding: 15px 20px;
+            cursor: pointer;
+            margin: auto 15px;
+            padding: 15px;
+
+
+            &.selected{
+              color: @color-blue;
+            }
           }
         }
       }
@@ -237,11 +255,30 @@ ul, li{
 
   .swiper-container{
     width: 100%;
-    height: 155px;
+    padding: 50px 45px;
 
     .swiper-slide{
-      width: 370px;
-      height: 152px;
+      border: 1px solid #ddd;
+      .img-box{
+        line-height: 100px;
+        margin: auto;
+        display: table;
+      }
+      .checkbox-box{
+        line-height: 50px;
+        text-align: center;
+      }
+
     }
+  }
+
+  .btn-blue{
+    border: 1px solid @color-blue;
+    color: @color-blue;
+  }
+
+  .btn-big{
+    width: 144px;
+    height: 47px;
   }
 }
