@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>汽车论坛监测</title>
     <link rel="stylesheet" href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/bootstrap-table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../../assets/bootstrap-select/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../../assets/swiper/css/swiper.min.css">
     <!--<link rel="stylesheet" href="../../css/style.css">-->
     <link rel="stylesheet/less" type="text/css" href="../../css/style.less">
     <script src="../../assets/less/less.min.js"></script>
@@ -27,12 +30,12 @@
     </div>
     <div class="left-part">
         <ul class="nav nav-pills nav-stacked nav-left" id="forum_nav">
-            <li class="active">
+            <li class="active" loadUrl="../forumMonitor/incrementTotal.html">
                 <a href="#">
                     <i class="nav-icon icon1"></i>增量总比
                 </a>
             </li>
-            <li>
+            <li loadUrl="../forumMonitor/plateIncreaseCompare.html">
                 <a href="javascript:;">
                     <i class="nav-icon icon2"></i>板块增量对比
                 </a>
@@ -94,10 +97,18 @@
     </div>
     <div class="right-part">
         <div class="content-wrap" id="content_wrap"></div>
+        <div class="footer">
+            Copyright©2017-2018 北京慧数科技有限公司-版权所有 京ICP备11012241-3号
+        </div>
     </div>
 </div>
 
 <script src="../../assets/jQuery/jquery.min.js"></script>
+<script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../../assets/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="../../assets/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="../../assets/swiper/js/swiper.js"></script>
+<script src="../../assets/echarts/echarts-all-3.js"></script>
 <script src="../../js/index.js"></script>
 </body>
 </html>

@@ -203,21 +203,27 @@ ul, li{
 
   .right-part{
     margin-left: 210px;
-    height: 100%;
+    min-height: 100%;
     padding: 20px 30px;
     background: #f0f4f7;
+    
+    .footer{
+      color: #63676b;
+      text-align: center;
+    }
 
     .content-wrap{
       background: #fff;
-      height: 100%;
+      min-height: 100%;
       width: 100%;
+      padding: 0 45px;
 
       .page-title{
-        padding: 15px 45px;
+        padding: 20px 0;
+        margin: 0;
       }
 
       .search-box{
-        margin: auto 45px;
         padding:0 15px;
         border: 1px solid #ddd;
 
@@ -250,25 +256,120 @@ ul, li{
           }
         }
       }
-    }
-  }
 
-  .swiper-container{
-    width: 100%;
-    padding: 50px 45px;
+      .car-panel{
+        margin-top: 25px;
+        border: none;
+        box-shadow: none;
 
-    .swiper-slide{
-      border: 1px solid #ddd;
-      .img-box{
-        line-height: 100px;
-        margin: auto;
-        display: table;
+        .panel-heading{
+          position: relative;
+
+          &:before{
+            content: " ";
+            display: block;
+            width: 5px;
+            height: 16px;
+            vertical-align: middle;
+            background-color: @color-blue;
+            position: absolute;
+            left: 0;
+            top: 13px;
+          }
+        }
+
+        .panel-body{
+          .form-space{
+            .form-group{
+              margin-right: 50px;
+
+              label{
+                font-weight:500;
+                margin-right: 20px;
+              }
+            }
+          }
+
+          .chart-h400{
+            width: 100%;
+            height: 400px;
+          }
+
+          &.noHorizontalPadding{
+            padding: 15px 0;
+          }
+        }
       }
-      .checkbox-box{
-        line-height: 50px;
-        text-align: center;
+
+      .brand-select-box{
+        padding: 45px 0;
+        position: relative;
+        border-bottom: 1px solid #dddddd;
+
+        .swiper-container{
+          width: 100%;
+          margin-bottom: 50px;
+
+          .swiper-slide{
+            border: 1px solid #ddd;
+            .img-box{
+              line-height: 100px;
+              margin: auto;
+              display: table;
+            }
+            .checkbox-box{
+              line-height: 50px;
+              text-align: center;
+            }
+
+            .select-box{
+              height: 150px;
+            }
+
+          }
+
+          .swiper-button-prev,
+          .swiper-button-next{
+            display: none;
+          }
+        }
+
+        .swiper-icon-prev{
+          position: absolute;
+          left: -26px;
+          top: 105px;
+          background-image: url("../images/icon-arrow.png");
+          background-repeat:no-repeat;
+          display: block;
+          width: 15px;
+          height: 25px;
+          cursor: pointer;
+        }
+
+        .swiper-icon-next{
+          position: absolute;
+          right: -26px;
+          top: 105px;
+          background-image: url("../images/icon-arrow.png");
+          background-repeat:no-repeat;
+          background-position: -41px 0;
+          display: block;
+          width: 15px;
+          height: 25px;
+          cursor: pointer;
+        }
       }
 
+      .car-table{
+        font-size: 16px;
+        thead{
+          tr th{
+            color: @color-blue;
+            font-weight: 500;
+            text-align: center;
+          }
+        }
+      }
     }
   }
 
@@ -280,5 +381,9 @@ ul, li{
   .btn-big{
     width: 144px;
     height: 47px;
+  }
+
+  .mrR10{
+    margin-right: 10px !important;
   }
 }

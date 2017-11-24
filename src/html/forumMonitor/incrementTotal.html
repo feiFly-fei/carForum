@@ -1,9 +1,5 @@
-<link rel="stylesheet" href="../../assets/swiper/css/swiper.min.css">
-<script src="../../assets/swiper/js/swiper.js"></script>
-
 <link rel="stylesheet" href="../../assets/icheck/flat/blue.css">
 <script src="../../assets/icheck/icheck.min.js"></script>
-
 <div class="incrementTotal">
     <h4 class="page-title">增量总比</h4>
     <div class="search-box">
@@ -67,10 +63,110 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
+        <i class="swiper-icon-prev"></i>
+        <i class="swiper-icon-next"></i>
 
         <div class="btn-box text-center">
             <button class="btn btn-default btn-blue btn-big">对比</button>
         </div>
     </div>
+
+    <div class="panel car-panel">
+        <div class="panel-heading">
+            <div class="panel-title">
+                各总站论坛活跃度对比(<span class="beginDate">2017.10.15--</span><span class="endDate">2017.10.15</span>)
+            </div>
+        </div>
+        <div class="panel-body">
+            <form class="form-inline form-space">
+                <div class="form-group">
+                    <label for="select">内容参数</label>
+                    <select class="selectpicker" id="select">
+                        <option>主贴量</option>
+                        <option>主贴量1</option>
+                        <option>主贴量2</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="select1">图标类型</label>
+                    <select class="selectpicker" id="select1">
+                        <option>饼图</option>
+                        <option>柱状图</option>
+                        <option>折线图</option>
+                    </select>
+                </div>
+            </form>
+            <div class="chart-h400" id="chart"></div>
+        </div>
+    </div>
+    <div class="panel car-panel">
+        <div class="panel-heading">
+            <div class="panel-title">
+                各总站论坛数据对比(<span class="beginDate">2017.10.15--</span><span class="endDate">2017.10.15</span>)
+            </div>
+        </div>
+        <div class="panel-body noHorizontalPadding">
+            <table data-toggle="table" class="table table-bordered car-table text-center">
+                <thead>
+                <tr>
+                    <th rowspan="2">日期</th>
+                    <th colspan="4">汽车之家</th>
+                    <th colspan="4">太平洋汽车</th>
+                    <th colspan="4">爱卡汽车</th>
+                    <th colspan="4">易车网</th>
+                </tr>
+                <tr>
+                    <th>主贴量</th>
+                    <th>精华帖</th>
+                    <th>回量帖</th>
+                    <th>点击量</th>
+                    <th>主贴量</th>
+                    <th>精华帖</th>
+                    <th>回量帖</th>
+                    <th>点击量</th>
+                    <th>主贴量</th>
+                    <th>精华帖</th>
+                    <th>回量帖</th>
+                    <th>点击量</th>
+                    <th>主贴量</th>
+                    <th>精华帖</th>
+                    <th>回量帖</th>
+                    <th>点击量</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>2017.10.15</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                </tr>
+                <tr>
+                    <td>2017.10.15</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                </tr>
+                <tr>
+                    <td>当前页总汇</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                </tr>
+                <tr>
+                    <td>平均数量</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                    <td>1291</td><td>291</td><td>1001</td><td>8375</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
+
 <script src="../../js/forumMonitor/incrementTotal.js"></script>

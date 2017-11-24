@@ -1,15 +1,18 @@
 /**
- * Created by lifei on 2017/11/23.
+ * Created by lifei on 2017/11/24.
  */
 
-(function () {
 
+(function () {
     if(!forum){
         forum = {};
     }
 
-    forum.increment = {
+    forum.plateIncrease = {
         init: function () {
+            //初始化select
+            $('.selectpicker').selectpicker();
+
             //初始化swiper
             var mySwiper = new Swiper('.swiper-container',{
                 navigation: {
@@ -21,20 +24,14 @@
                 roundLengths : true
             });
 
-            $('input.checkbox').iCheck({
-                checkboxClass: 'icheckbox_flat-blue'
-            });
-
             //初始化左右箭头点击事件
             $('.swiper-icon-next').on('click', function () {
-               $('.swiper-button-next').click();
+                $('.swiper-button-next').click();
             });
 
             $('.swiper-icon-prev').on('click', function () {
                 $('.swiper-button-prev').click();
             });
-
-            $('.selectpicker').selectpicker();
 
             this.loadEchartData();
         },
@@ -109,10 +106,9 @@
             chart.setOption(option);
         }
     }
-
 })();
 
 
 $(document).ready(function () {
-    forum.increment.init();
+    forum.plateIncrease.init();
 });
