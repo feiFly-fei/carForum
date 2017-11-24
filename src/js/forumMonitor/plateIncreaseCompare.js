@@ -17,7 +17,7 @@
             var mySwiper = new Swiper('.swiper-container',{
                 navigation: {
                     nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                    prevEl: '.swiper-button-prev'
                 },
                 spaceBetween : 25,
                 slidesPerView: 4,
@@ -33,6 +33,7 @@
                 $('.swiper-button-prev').click();
             });
 
+            this.resetArrowPosition();
             this.loadEchartData();
         },
 
@@ -104,11 +105,21 @@
             };
             var chart = echarts.init(document.getElementById('chart'));
             chart.setOption(option);
+        },
+
+        resetArrowPosition: function () {
+            var height = $('.brand-select-box').height()/2;
+            $('.swiper-icon-prev').css('top', height);
+            $('.swiper-icon-next').css('top', height);
         }
     }
 })();
 
 
 $(document).ready(function () {
-    forum.plateIncrease.init();
+    try {
+        forum.plateIncrease.init();
+    }catch (e){
+        console.error(e);
+    }
 });
