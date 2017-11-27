@@ -10,7 +10,7 @@
 
     forum.increment = {
         init: function () {
-            //初始化swiper
+            //初始化swiper  图片滑动效果
             var mySwiper = new Swiper('.swiper-container',{
                 navigation: {
                     nextEl: '.swiper-button-next',
@@ -21,6 +21,7 @@
                 roundLengths : true
             });
 
+            //初始化CheckBox
             $('input.checkbox').iCheck({
                 checkboxClass: 'icheckbox_flat-blue'
             });
@@ -34,7 +35,29 @@
                 $('.swiper-button-prev').click();
             });
 
+            //初始化select
             $('.selectpicker').selectpicker();
+
+            //初始化日期范围选择控件
+            laydate.render({
+                elem: '#datPicker',
+                range: true,
+                format: 'yyyy.MM.dd'
+            });
+
+            //初始化选择框内的点击效果
+            $('.search-list li').on('click', function () {
+                var _this = $(this);
+                if(!_this.hasClass('date-li')){
+                    _this.addClass('selected').siblings().removeClass('selected');
+                    if(_this.hasClass('self-defined-date')){
+                        $('.date-li').css('display', 'inline-block');
+                    }else if(_this.siblings('.self-defined-date').length > 0){
+                        //清空日期并隐藏
+                        $('#datPicker').val('').parent().hide();
+                    }
+                }
+            });
 
             this.loadEchartData();
         },

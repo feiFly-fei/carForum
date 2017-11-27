@@ -66,7 +66,7 @@ ul, li{
 
       li{
         display: inline-block;
-        margin: auto 15px;
+        margin: auto 10px;
 
         a{
           color: #e6e6e6;
@@ -80,7 +80,7 @@ ul, li{
             background-size: 128px 19px;
             width: 22px;
             height: 20px;
-            margin-right: 10px;
+            margin-right: 5px;
 
             &.icon1{
               background-position: 3px 1px;
@@ -242,6 +242,14 @@ ul, li{
         }
 
         .search-list{
+          height: 50px;
+          overflow: hidden;
+
+          &.more-list{
+            display: inline-block;
+            width: 100%;
+            margin-right: -120px;
+          }
 
           li{
             display: inline-block;
@@ -249,11 +257,22 @@ ul, li{
             margin: auto 15px;
             padding: 15px;
 
+            &.date-li{
+              padding: 0;
+              display: none;
+            }
 
             &.selected{
               color: @color-blue;
             }
           }
+        }
+
+        .btn-box{
+          display: inline-block;
+          width: 120px;
+          vertical-align: top;
+          line-height: 50px;
         }
       }
 
