@@ -40,6 +40,11 @@
                 format: 'yyyy.MM.dd'
             });
 
+            //初始化CheckBox
+            $('input.checkbox').iCheck({
+                checkboxClass: 'icheckbox_square-blue'
+            });
+
             //初始化选择框内的点击效果
             $('.search-list li').on('click', function () {
                 var _this = $(this);
@@ -51,6 +56,25 @@
                         //清空日期并隐藏
                         $('#datPicker').val('').parent().hide();
                     }
+                }
+            });
+
+            //更多按钮点击事件
+            $('.btn-box .btn-more').on('click', function () {
+                var _this = $(this);
+                var _spanIcon = _this.find('span.glyphicon'),
+                    _ul = _this.parent().prev('.search-list'),
+                    _ulParent = _ul.parent();
+                if(_this.hasClass('fold')){
+                    _ul.css('height', 'auto');
+                    _ulParent.prev('.text').css('height', _ulParent.height()+1);
+                    _spanIcon.removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+                    _this.removeClass('fold').addClass('unfold');
+                }else if(_this.hasClass('unfold')){
+                    _ul.css('height', 50);
+                    _ulParent.prev('.text').css('height', 51);
+                    _spanIcon.removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+                    _this.removeClass('unfold').addClass('fold');
                 }
             });
 
