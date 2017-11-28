@@ -1,0 +1,263 @@
+<!--热门帖子排行页面-->
+<div class="incrementTotal">
+    <h4 class="page-title">周数据统计</h4>
+    <div class="search-box">
+        <div class="row">
+            <div class="col-md-1 text">论坛监测</div>
+            <div class="col-md-11">
+                <ul class="search-list more-list">
+                    <li>
+                        <input type="checkbox" class="checkbox form-control">  咸驰FS论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox form-control">  长安CS35论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox form-control">  本田CR-V论坛
+                    </li>
+                    <li class="selected">
+                        <input type="checkbox" class="checkbox form-control">  奔驰GLA论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox form-control">  宝马5系论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  陆风X2论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  奥迪Q5论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  宝马X3论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  奇瑞QQ论坛
+                    </li>
+                </ul>
+                <div class="btn-box">
+                    <button class="btn btn-link btn-more fold">更多 <span class="glyphicon glyphicon-chevron-down"></span></button>
+                    <button class="btn btn-default btn-check"><span class="glyphicon glyphicon-plus"></span> 多选</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 text">已毕业</div>
+            <div class="col-md-11">
+                <ul class="search-list more-list">
+                    <li class="selected">
+                        <input type="checkbox" class="checkbox">  起亚K2论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  传奇GS8论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  指南者论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  宝马1系论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  荣耀i6论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  卡罗拉论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  名爵论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  宝马1系论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  本田UR-V论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  柯迪亚克论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox"> 途观/途观L论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  瑞风S7论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  探界者论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  WEY VV7论坛
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox">  哈弗H6论坛
+                    </li>
+                </ul>
+                <div class="btn-box">
+                    <button class="btn btn-link btn-more fold">更多 <span class="glyphicon glyphicon-chevron-down"></span></button>
+                    <button class="btn btn-default btn-check"><span class="glyphicon glyphicon-plus"></span> 多选</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 text">时间</div>
+            <div class="col-md-11">
+                <ul class="search-list">
+                    <li class="selected">今天</li>
+                    <li>昨天</li><li>前天</li>
+                    <li>近7天</li><li>近30天</li>
+                    <li class="self-defined-date">自定义时间</li>
+                    <li class="date-li"><input type="text" id="datPicker" class="form-control"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 text">排水</div>
+            <div class="col-md-11">
+                <ul class="search-list">
+                    <li class="selected">排水前</li><li>排水后</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel car-panel">
+        <div class="panel-heading">
+            <div class="panel-title clearfix">
+                各站点对比(42周)
+                <div class="btn-box pull-right">
+                    <button class="btn btn-default">
+                        <span class="glyphicon glyphicon-cloud-download"></span> 导出
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body noPadding">
+            <div class="row">
+                <div class="col-md-6 mrB10">
+                    <div class="title-dot">威驰FS论坛</div>
+                    <table class="table table-bordered car-table">
+                        <thead>
+                        <tr>
+                            <th colspan="2">汽车之家</th><th colspan="2">爱卡汽车</th><th colspan="2">太平洋汽车</th><th class="color-black" rowspan="2">主贴占比</th>
+                        </tr>
+                        <tr class="color-black">
+                            <th>主贴</th><th>回帖</th>
+                            <th>主贴</th><th>回帖</th>
+                            <th>主贴</th><th>回帖</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>12</td><td>37</td><td>21</td><td>40</td><td>19</td><td>7</td><td>84%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6 mrB10">
+                    <div class="title-dot">长安CS35论坛</div>
+                    <table class="table table-bordered car-table">
+                        <thead>
+                        <tr>
+                            <th colspan="2">汽车之家</th><th colspan="2">爱卡汽车</th><th colspan="2">太平洋汽车</th><th class="color-black" rowspan="2">主贴占比</th>
+                        </tr>
+                        <tr>
+                            <th>主贴</th><th>回帖</th>
+                            <th>主贴</th><th>回帖</th>
+                            <th>主贴</th><th>回帖</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>12</td><td>37</td><td>21</td><td>40</td><td>19</td><td>7</td><td>78%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6 mrB10">
+                    <div class="title-dot">本田CR-V论坛</div>
+                    <table class="table table-bordered car-table">
+                        <thead>
+                        <tr>
+                            <th colspan="2">汽车之家</th><th colspan="2">爱卡汽车</th><th colspan="2">太平洋汽车</th><th class="color-black" rowspan="2">主贴占比</th>
+                        </tr>
+                        <tr class="color-black">
+                            <th>主贴</th><th>回帖</th>
+                            <th>主贴</th><th>回帖</th>
+                            <th>主贴</th><th>回帖</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>12</td><td>37</td><td>21</td><td>40</td><td>19</td><td>7</td><td>84%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6 mrB10">
+                    <div class="title-dot">奔驰GLA论坛</div>
+                    <table class="table table-bordered car-table">
+                        <thead>
+                        <tr>
+                            <th colspan="2">汽车之家</th><th colspan="2">爱卡汽车</th><th colspan="2">太平洋汽车</th><th class="color-black" rowspan="2">主贴占比</th>
+                        </tr>
+                        <tr>
+                            <th>主贴</th><th>回帖</th>
+                            <th>主贴</th><th>回帖</th>
+                            <th>主贴</th><th>回帖</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>12</td><td>37</td><td>21</td><td>40</td><td>19</td><td>7</td><td>78%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6 mrB10">
+                    <div class="title-dot">宝马5系论坛</div>
+                    <table class="table table-bordered car-table">
+                        <thead>
+                        <tr>
+                            <th colspan="2">汽车之家</th><th colspan="2">爱卡汽车</th><th colspan="2">太平洋汽车</th><th class="color-black" rowspan="2">主贴占比</th>
+                        </tr>
+                        <tr class="color-black">
+                            <th>主贴</th><th>回帖</th>
+                            <th>主贴</th><th>回帖</th>
+                            <th>主贴</th><th>回帖</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>12</td><td>37</td><td>21</td><td>40</td><td>19</td><td>7</td><td>84%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6 mrB10">
+                    <div class="title-dot">长安CS35论坛</div>
+                    <table class="table table-bordered car-table">
+                        <thead>
+                        <tr>
+                            <th colspan="2">汽车之家</th><th colspan="2">爱卡汽车</th><th colspan="2">太平洋汽车</th><th class="color-black" rowspan="2">主贴占比</th>
+                        </tr>
+                        <tr>
+                            <th>主贴</th><th>回帖</th>
+                            <th>主贴</th><th>回帖</th>
+                            <th>主贴</th><th>回帖</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>12</td><td>37</td><td>21</td><td>40</td><td>19</td><td>7</td><td>78%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="summary">
+                监测论坛: <span class="color-blue">5</span> &nbsp;
+                毕业论坛: <span class="color-blue">6</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/forumMonitor/hotPlateCompare.js"></script>
