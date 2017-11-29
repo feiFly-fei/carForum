@@ -116,6 +116,16 @@
                     {field: 'clickNum', title:　'点击量'}
                 ]
             });
+
+            //添加标签按钮点击事件
+            $('#btnAddTag').on('click', function () {
+                $('#myModal').modal('toggle');
+            });
+
+            $('#myModal').on('shown.bs.modal', function () {
+                that.initModalUi();
+            });
+
         },
 
         resetSearchListHeight: function (flag, $ul) {
@@ -139,6 +149,7 @@
         },
    
         initModalUi: function () {
+            var that = this;
             //初始化select
             $('.selectpicker').selectpicker();
 
@@ -160,6 +171,18 @@
             $('.swiper-icon-prev').on('click', function () {
                 $('.swiper-button-prev').click();
             });
+
+            $('.modal-form .checkbox').iCheck({
+                checkboxClass: 'icheckbox_minimal-blue'
+            });
+
+            that.resetArrowPosition();
+        },
+
+        resetArrowPosition: function () {
+            var height = $('.brand-select-box').height()/2;
+            $('.swiper-icon-prev').css('top', height);
+            $('.swiper-icon-next').css('top', height);
         }
     }
 })();
@@ -167,7 +190,6 @@
 $(document).ready(function () {
     try {
         forum. weekData.init();
-        forum.weekData.initModalUi();
     }catch (e){
         console.error(e);
     }
