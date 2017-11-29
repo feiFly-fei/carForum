@@ -243,6 +243,7 @@ ul, li{
             top:0;
             display: block;
             width: 140px;
+            line-height: 50px;
 
             .btn{
               font-size: 12px;
@@ -257,6 +258,87 @@ ul, li{
               &.btn-check{
                 padding: 2px 5px;
               }
+            }
+          }
+
+          .check-btn-box{
+            margin: 20px auto;
+            text-align: center;
+            display: none;
+
+            .btn{
+              width: 58px;
+            }
+
+            .confirmBtn{
+              margin-right: 20px;
+              background-color: @color-blue;
+              color: #fff;
+
+              &:hover,
+              &:active,
+              &:focus{
+                color: #fff;
+              }
+            }
+          }
+
+          .operate-btn-box{
+            padding: 15px 30px 5px;
+
+            .btn{
+              padding: 3px 25px;
+
+              .icon{
+                display: inline-block;
+                width: 20px;
+                height: 18px;
+                background-image: url("../images/icon-operate.png");
+                background-repeat:no-repeat;
+                vertical-align: text-top;
+                margin-right: 8px;
+
+                &.icon-plus{
+                  background-position: 2px 0;
+                }
+
+                &.icon-graduate{
+                  background-position: -30px -2px;
+                }
+
+                &.icon-delete{
+                  background-position: -60px 0;
+                }
+              }
+
+              &.active{
+                color: @color-blue;
+                background: transparent;
+                box-shadow: none;
+
+                .icon-plus{
+                  background-position: 2px -29px;
+                }
+
+                .icon-graduate{
+                  background-position: -30px -30px;
+                }
+
+                .icon-delete{
+                  background-position: -60px -29px;
+                }
+              }
+            }
+          }
+
+          &.special{
+            .text{
+              height: 99px;
+              line-height: 30px;
+            }
+
+            .btn-box{
+              top: 43px;
             }
           }
         }
@@ -295,19 +377,11 @@ ul, li{
               color: @color-blue;
             }
 
-            .checkbox{
-              //display: none;
-              width: 16px;
-              height: 16px;
+            &>div.search-checkbox{
+              display: none;
+              margin-right: 5px;
             }
           }
-        }
-
-        .btn-box{
-          display: inline-block;
-          width: 120px;
-          vertical-align: top;
-          line-height: 50px;
         }
       }
 
@@ -497,6 +571,35 @@ ul, li{
           }
         }
       }
+
+      .car-modal{
+        .modal-header{
+          background-color: @color-blue;
+          color: #fff;
+
+          .close{
+            opacity: 1;
+            color: #fff;
+            font-weight:500;
+          }
+        }
+
+        .modal-content{
+          .brand-select-box{
+            padding-left: 30px;
+            padding-right: 30px;
+            border-bottom: 0;
+
+            .swiper-icon-prev{
+              left: 0;
+            }
+
+            .swiper-icon-next{
+              right: 0;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -505,11 +608,25 @@ ul, li{
     color: @color-blue;
   }
 
+  .btn-bg-blue,
+  .btn-bg-blue:hover,
+  .btn-bg-blue:active,
+  .btn-bg-blue:focus{
+    background: @color-blue;
+    color: #fff;
+  }
+
+  .btn-gray{
+    color: #666;
+    border: 1px solid #ddd;
+    padding: 5px 11px;
+  }
+  
   .btn-big{
     width: 144px;
     height: 47px;
   }
-
+  
   .mrR10{
     margin-right: 10px !important;
   }

@@ -6,19 +6,19 @@
             <div class="col-md-11">
                 <ul class="search-list more-list">
                     <li>
-                        <input type="checkbox" class="checkbox form-control">  咸驰FS论坛
+                        <input type="checkbox" class="checkbox">  咸驰FS论坛
                     </li>
                     <li>
-                        <input type="checkbox" class="checkbox form-control">  长安CS35论坛
+                        <input type="checkbox" class="checkbox">  长安CS35论坛
                     </li>
                     <li>
-                        <input type="checkbox" class="checkbox form-control">  本田CR-V论坛
+                        <input type="checkbox" class="checkbox">  本田CR-V论坛
                     </li>
                     <li class="selected">
-                        <input type="checkbox" class="checkbox form-control">  奔驰GLA论坛
+                        <input type="checkbox" class="checkbox">  奔驰GLA论坛
                     </li>
                     <li>
-                        <input type="checkbox" class="checkbox form-control">  宝马5系论坛
+                        <input type="checkbox" class="checkbox">  宝马5系论坛
                     </li>
                     <li>
                         <input type="checkbox" class="checkbox">  陆风X2论坛
@@ -36,6 +36,10 @@
                 <div class="btn-box">
                     <button class="btn btn-link btn-more fold">更多 <span class="glyphicon glyphicon-chevron-down"></span></button>
                     <button class="btn btn-default btn-check"><span class="glyphicon glyphicon-plus"></span> 多选</button>
+                </div>
+                <div class="check-btn-box">
+                    <button class="btn btn-sm confirmBtn">确认</button>
+                    <button class="btn btn-default btn-sm cancelBtn">取消</button>
                 </div>
             </div>
         </div>
@@ -92,6 +96,10 @@
                 <div class="btn-box">
                     <button class="btn btn-link btn-more fold">更多 <span class="glyphicon glyphicon-chevron-down"></span></button>
                     <button class="btn btn-default btn-check"><span class="glyphicon glyphicon-plus"></span> 多选</button>
+                </div>
+                <div class="check-btn-box">
+                    <button class="btn btn-sm confirmBtn">确认</button>
+                    <button class="btn btn-default btn-sm cancelBtn">取消</button>
                 </div>
             </div>
         </div>
@@ -258,7 +266,7 @@
 
         <div class="btn-box text-center">
             <button class="btn btn-default btn-blue btn-big mrR10">开始对比</button>
-            <button class="btn btn-primary btn-big">清除选项</button>
+            <button class="btn btn-big btn-bg-blue">清除选项</button>
         </div>
     </div>
 
@@ -266,6 +274,11 @@
         <div class="panel-heading">
             <div class="panel-title">
                 各总站论坛活跃度对比(<span class="beginDate">2017.10.15--</span><span class="endDate">2017.10.15</span>)
+                <div class="btn-box pull-right">
+                    <button class="btn btn-default btn-gray">
+                        <span class="glyphicon glyphicon-cloud-download mrR10"></span>导出
+                    </button>
+                </div>
             </div>
         </div>
         <div class="panel-body">
@@ -297,7 +310,7 @@
             </div>
         </div>
         <div class="panel-body noHorizontalPadding">
-            <table data-toggle="table" class="table table-bordered car-table text-center">
+            <table data-toggle="table" class="table table-bordered car-table table-striped">
                 <thead>
                 <tr>
                     <th rowspan="2">日期</th>

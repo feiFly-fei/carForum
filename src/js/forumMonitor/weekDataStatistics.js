@@ -2,17 +2,14 @@
  * Created by lifei on 2017/11/24.
  */
 
-
 (function () {
     if(!forum){
         forum = {};
     }
 
-    forum.plateIncrease = {
+    forum. weekData = {
         init: function () {
             var that = this;
-            //初始化select
-            $('.selectpicker').selectpicker();
 
             //初始化swiper
             var mySwiper = new Swiper('.swiper-container',{
@@ -34,16 +31,16 @@
                 $('.swiper-button-prev').click();
             });
 
+            //复选框初始化
+            $('.search-box input.checkbox').iCheck({
+                checkboxClass: 'icheckbox_minimal-blue search-checkbox'
+            });
+
             //初始化日期范围选择控件
             laydate.render({
                 elem: '#datPicker',
                 range: true,
                 format: 'yyyy.MM.dd'
-            });
-
-            //复选框初始化
-            $('.search-box input.checkbox').iCheck({
-                checkboxClass: 'icheckbox_minimal-blue search-checkbox'
             });
 
             //初始化选择框内的点击效果
@@ -60,6 +57,15 @@
                 }
             });
 
+            $('.search-list li').on('hover', function () {
+                console.log(12912)
+                var _this = $(this);
+                _this.popover({
+                    placement: right,
+                    content: "<div style='font-size: 23px;'>sdasd</div>"
+                }).popover('show');
+            });
+
             //更多按钮点击事件
             $('.btn-box .btn-more').on('click', function () {
                 var _this = $(this);
@@ -73,7 +79,12 @@
                     _this.removeClass('fold').addClass('unfold');
                 }else if(_this.hasClass('unfold')){
                     _ul.css('height', 50);
-                    _ulParent.prev('.text').css('height', 51);
+                    if(_ulParent.closest('div.row').hasClass('special')){
+                        _ulParent.prev('.text').css('height', 99);
+                    }else {
+                        _ulParent.prev('.text').css('height', 51);
+                    }
+
                     _spanIcon.removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
                     _this.removeClass('unfold').addClass('fold');
                 }
@@ -87,88 +98,24 @@
 
             //筛选框内多选的状态下  点击取消按钮的事件
             $('.check-btn-box .cancelBtn').on('click', function () {
-               var $ul = $(this).parent().prevAll('.search-list');
-               that.resetSearchListHeight('fold', $ul);
+                var $ul = $(this).parent().prevAll('.search-list');
+                that.resetSearchListHeight('fold', $ul);
             });
 
-            this.resetArrowPosition();
-            this.loadEchartData();
-        },
-
-        loadEchartData: function () {
-
-            var option = {
-                tooltip: {
-                    trigger: 'item',
-                    formatter: "{a} <br/>{b}: {c} ({d}%)"
-                },
-                series: [
-                    {
-                        type:'pie',
-                        radius: ['50%', '70%'],
-                        label: {
-                            normal: {
-                                show: true
-                            }
-                        },
-                        labelLine: {
-                            normal: {
-                                show: true
-                            }
-                        },
-                        data:[
-                            {
-                                value:335, name:'车轮社区',
-                                itemStyle:{
-                                    normal:{
-                                        color: '#6277f7'
-                                    }
-                                }
-                            },
-                            {
-                                value:310, name:'易车网',
-                                itemStyle:{
-                                    normal:{
-                                        color: '#8c90ec'
-                                    }
-                                }
-                            },
-                            {
-                                value:234, name:'爱卡汽车',
-                                itemStyle:{
-                                    normal:{
-                                        color: '#36d7d9'
-                                    }
-                                }
-                            },
-                            {
-                                value:135, name:'太平洋汽车',
-                                itemStyle:{
-                                    normal:{
-                                        color: '#33b0f3'
-                                    }
-                                }
-                            },
-                            {
-                                value:448, name:'汽车之家',
-                                itemStyle:{
-                                    normal:{
-                                        color: '#5498ff'
-                                    }
-                                }
-                            }
-                        ]
-                    }
+            $('#table').bootstrapTable({
+                url: '../../json/tableData.json',
+                method: 'post',
+                pagination: true,
+                pageNumber: 1,
+                pageSize: 10,
+                columns: [
+                    {field: 'rank', title: '排名'},
+                    {field: 'plate', title: '板块'},
+                    {field: 'mainTopicNum', title: '主贴量'},
+                    {field: 'replayTopicNum', title: '回帖量'},
+                    {field: 'clickNum', title:　'点击量'}
                 ]
-            };
-            var chart = echarts.init(document.getElementById('chart'));
-            chart.setOption(option);
-        },
-
-        resetArrowPosition: function () {
-            var height = $('.brand-select-box').height()/2;
-            $('.swiper-icon-prev').css('top', height);
-            $('.swiper-icon-next').css('top', height);
+            });
         },
 
         resetSearchListHeight: function (flag, $ul) {
@@ -178,21 +125,49 @@
                 //折叠起来
                 $ul.height(50).nextAll('.check-btn-box').hide();
                 $ul.find('li .search-checkbox').hide();
-                $ulParent.prev('.text').css('height', 51);
+                if($ulParent.closest('div.row').hasClass('special')){
+                    $ulParent.prev('.text').css('height', 99);
+                }else {
+                    $ulParent.prev('.text').css('height', 51);
+                }
             }else {
                 //展开
                 $ul.css('height', 'auto').nextAll('.check-btn-box').show();
                 $ul.find('li .search-checkbox').css('display', 'inline-block');
                 $ulParent.prev('.text').css('height', $ulParent.height()+1);
             }
+        },
+   
+        initModalUi: function () {
+            //初始化select
+            $('.selectpicker').selectpicker();
+
+            //初始化swiper
+            var mySwiper = new Swiper('.swiper-container',{
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+                slidesPerView: 3,
+                roundLengths : true
+            });
+
+            //初始化左右箭头点击事件
+            $('.swiper-icon-next').on('click', function () {
+                $('.swiper-button-next').click();
+            });
+
+            $('.swiper-icon-prev').on('click', function () {
+                $('.swiper-button-prev').click();
+            });
         }
     }
 })();
 
-
 $(document).ready(function () {
     try {
-        forum.plateIncrease.init();
+        forum. weekData.init();
+        forum.weekData.initModalUi();
     }catch (e){
         console.error(e);
     }

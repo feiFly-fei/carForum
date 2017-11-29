@@ -17,11 +17,13 @@
 
             //根据点击的标志 判断  左侧导航切换 右侧内容切换
             var _forumNav = $('#forum_nav'), _comNav = $('#community_nav');
+            //全部都恢复默认选中导航第一个
+            _forumNav.find('li').removeClass('active').eq(0).addClass('active');
             if(_this.hasClass('forum')){
                 //显示论坛监测相关内容
                 _comNav.hide();
                 _forumNav.show();
-                forum.base.getForumDefaultPage();
+                forum.base.leftNavChange('../forumMonitor/incrementTotal.html');
             }else {
                 //显示社区监测相关内容
                 _forumNav.hide();
