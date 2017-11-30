@@ -61,7 +61,7 @@
                 console.log(12912)
                 var _this = $(this);
                 _this.popover({
-                    placement: right,
+                    placement: 'right',
                     content: "<div style='font-size: 23px;'>sdasd</div>"
                 }).popover('show');
             });

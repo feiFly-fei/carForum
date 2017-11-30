@@ -657,3 +657,34 @@ ul, li{
     color: @color-blue;
   }
 }
+
+
+@media screen and (max-width: 1600px) {
+  .main{
+    .left-part{
+      width:  180px;
+    }
+
+    .right-part{
+      padding: 15px;
+      margin-left: 180px;
+
+      .content-wrap{
+        padding: 0 20px;
+
+        .brand-select-box{
+          .swiper-icon-prev{
+            left: -18px;
+          }
+          .swiper-icon-next{
+            right: -19px;
+          }
+        }
+
+        .car-table{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

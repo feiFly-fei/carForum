@@ -4,6 +4,7 @@ html {
 body {
   height: 100%;
   padding-top: 80px;
+  color: #333;
 }
 ul,
 li {
@@ -57,7 +58,7 @@ li {
 }
 .main .top .nav-center li {
   display: inline-block;
-  margin: auto 15px;
+  margin: auto 10px;
 }
 .main .top .nav-center li a {
   color: #e6e6e6;
@@ -71,7 +72,7 @@ li {
   background-size: 128px 19px;
   width: 22px;
   height: 20px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .main .top .nav-center li a i.icon-center.icon1 {
   background-position: 3px 1px;
@@ -184,6 +185,7 @@ li {
 .main .right-part .footer {
   color: #63676b;
   text-align: center;
+  margin-top: 20px;
 }
 .main .right-part .content-wrap {
   background: #fff;
@@ -199,8 +201,94 @@ li {
   padding: 0 15px;
   border: 1px solid #ddd;
 }
+.main .right-part .content-wrap .search-box .row {
+  position: relative;
+}
 .main .right-part .content-wrap .search-box .row > div {
   border-bottom: 1px dashed #ddd;
+}
+.main .right-part .content-wrap .search-box .row .btn-box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 140px;
+  line-height: 50px;
+}
+.main .right-part .content-wrap .search-box .row .btn-box .btn {
+  font-size: 12px;
+  color: #808080;
+  text-decoration: none;
+}
+.main .right-part .content-wrap .search-box .row .btn-box .btn.btn-more:hover,
+.main .right-part .content-wrap .search-box .row .btn-box .btn.btn-more:focus {
+  text-decoration: none;
+}
+.main .right-part .content-wrap .search-box .row .btn-box .btn.btn-check {
+  padding: 2px 5px;
+}
+.main .right-part .content-wrap .search-box .row .check-btn-box {
+  margin: 20px auto;
+  text-align: center;
+  display: none;
+}
+.main .right-part .content-wrap .search-box .row .check-btn-box .btn {
+  width: 58px;
+}
+.main .right-part .content-wrap .search-box .row .check-btn-box .confirmBtn {
+  margin-right: 20px;
+  background-color: #3384ff;
+  color: #fff;
+}
+.main .right-part .content-wrap .search-box .row .check-btn-box .confirmBtn:hover,
+.main .right-part .content-wrap .search-box .row .check-btn-box .confirmBtn:active,
+.main .right-part .content-wrap .search-box .row .check-btn-box .confirmBtn:focus {
+  color: #fff;
+}
+.main .right-part .content-wrap .search-box .row .operate-btn-box {
+  padding: 15px 30px 5px;
+}
+.main .right-part .content-wrap .search-box .row .operate-btn-box .btn {
+  padding: 3px 25px;
+}
+.main .right-part .content-wrap .search-box .row .operate-btn-box .btn .icon {
+  display: inline-block;
+  width: 20px;
+  height: 18px;
+  background-image: url("../images/icon-operate.png");
+  background-repeat: no-repeat;
+  vertical-align: text-top;
+  margin-right: 8px;
+}
+.main .right-part .content-wrap .search-box .row .operate-btn-box .btn .icon.icon-plus {
+  background-position: 2px 0;
+}
+.main .right-part .content-wrap .search-box .row .operate-btn-box .btn .icon.icon-graduate {
+  background-position: -30px -2px;
+}
+.main .right-part .content-wrap .search-box .row .operate-btn-box .btn .icon.icon-delete {
+  background-position: -60px 0;
+}
+.main .right-part .content-wrap .search-box .row .operate-btn-box .btn.active {
+  color: #3384ff;
+  background: transparent;
+  box-shadow: none;
+}
+.main .right-part .content-wrap .search-box .row .operate-btn-box .btn.active .icon-plus {
+  background-position: 2px -29px;
+}
+.main .right-part .content-wrap .search-box .row .operate-btn-box .btn.active .icon-graduate {
+  background-position: -30px -30px;
+}
+.main .right-part .content-wrap .search-box .row .operate-btn-box .btn.active .icon-delete {
+  background-position: -60px -29px;
+}
+.main .right-part .content-wrap .search-box .row.special .text {
+  height: 99px;
+  line-height: 30px;
+}
+.main .right-part .content-wrap .search-box .row.special .btn-box {
+  top: 43px;
 }
 .main .right-part .content-wrap .search-box .row:last-child > div {
   border-bottom: none;
@@ -210,14 +298,30 @@ li {
   color: #808080;
   text-align: center;
 }
+.main .right-part .content-wrap .search-box .search-list {
+  height: 50px;
+  overflow: hidden;
+  font-size: 14px;
+}
+.main .right-part .content-wrap .search-box .search-list.more-list {
+  padding-right: 140px;
+}
 .main .right-part .content-wrap .search-box .search-list li {
   display: inline-block;
   cursor: pointer;
   margin: auto 15px;
   padding: 15px;
 }
+.main .right-part .content-wrap .search-box .search-list li.date-li {
+  padding: 0;
+  display: none;
+}
 .main .right-part .content-wrap .search-box .search-list li.selected {
   color: #3384ff;
+}
+.main .right-part .content-wrap .search-box .search-list li > div.search-checkbox {
+  display: none;
+  margin-right: 5px;
 }
 .main .right-part .content-wrap .car-panel {
   margin-top: 25px;
@@ -238,6 +342,9 @@ li {
   left: 0;
   top: 13px;
 }
+.main .right-part .content-wrap .car-panel .panel-heading .color-gray {
+  color: #666;
+}
 .main .right-part .content-wrap .car-panel .panel-body .form-space .form-group {
   margin-right: 50px;
 }
@@ -251,6 +358,28 @@ li {
 }
 .main .right-part .content-wrap .car-panel .panel-body.noHorizontalPadding {
   padding: 15px 0;
+}
+.main .right-part .content-wrap .car-panel .panel-body.noPadding {
+  padding: 0;
+}
+.main .right-part .content-wrap .car-panel .panel-body .title-dot {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+.main .right-part .content-wrap .car-panel .panel-body .title-dot:before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: #3384ff;
+  border-radius: 50%;
+}
+.main .right-part .content-wrap .car-panel .panel-body .summary {
+  margin-bottom: 15px;
 }
 .main .right-part .content-wrap .brand-select-box {
   padding: 45px 0;
@@ -274,7 +403,9 @@ li {
   text-align: center;
 }
 .main .right-part .content-wrap .brand-select-box .swiper-container .swiper-slide .select-box {
-  height: 150px;
+  line-height: 50px;
+  margin: 50px auto;
+  text-align: center;
 }
 .main .right-part .content-wrap .brand-select-box .swiper-container .swiper-button-prev,
 .main .right-part .content-wrap .brand-select-box .swiper-container .swiper-button-next {
@@ -305,15 +436,81 @@ li {
 }
 .main .right-part .content-wrap .car-table {
   font-size: 16px;
+  text-align: center;
+}
+.main .right-part .content-wrap .car-table thead tr.color-black th {
+  color: #333 !important;
 }
 .main .right-part .content-wrap .car-table thead tr th {
   color: #3384ff;
   font-weight: 500;
   text-align: center;
+  vertical-align: middle;
+  line-height: 43px;
+}
+.main .right-part .content-wrap .car-table thead tr th.color-black {
+  color: #333;
+}
+.main .right-part .content-wrap .car-table td {
+  line-height: 53px;
+  vertical-align: middle;
+}
+.main .right-part .content-wrap .car-table td.color-blue {
+  color: #3384ff;
+}
+.main .right-part .content-wrap .car-table td.merge-td {
+  width: 350px;
+  background-color: #fff;
+}
+.main .right-part .content-wrap .bootstrap-table .car-table thead tr th div.th-inner {
+  line-height: 53px;
+}
+.main .right-part .content-wrap .car-modal .modal-header {
+  background-color: #3384ff;
+  color: #fff;
+}
+.main .right-part .content-wrap .car-modal .modal-header .close {
+  opacity: 1;
+  color: #fff;
+  font-weight: 500;
+}
+.main .right-part .content-wrap .car-modal .modal-content .brand-select-box {
+  padding-left: 30px;
+  padding-right: 30px;
+  border-bottom: 0;
+}
+.main .right-part .content-wrap .car-modal .modal-content .brand-select-box .swiper-icon-prev {
+  left: 0;
+}
+.main .right-part .content-wrap .car-modal .modal-content .brand-select-box .swiper-icon-next {
+  right: 0;
+}
+.main .right-part .content-wrap .car-modal .modal-content .modal-form {
+  width: 80%;
+  margin: auto;
+}
+.main .right-part .content-wrap .car-modal .modal-content .modal-form label {
+  margin-left: 5px;
+  font-weight: 500;
+}
+.main .right-part .content-wrap .car-modal .modal-footer {
+  text-align: center;
 }
 .main .btn-blue {
   border: 1px solid #3384ff;
   color: #3384ff;
+}
+.main .btn-bg-blue,
+.main .btn-bg-blue:hover,
+.main .btn-bg-blue:active,
+.main .btn-bg-blue:focus {
+  background: #3384ff;
+  color: #fff;
+}
+.main .btn-gray {
+  color: #666;
+  border: 1px solid #ddd;
+  padding: 5px 11px;
 }
 .main .btn-big {
   width: 144px;
@@ -321,4 +518,34 @@ li {
 }
 .main .mrR10 {
   margin-right: 10px !important;
+}
+.main .mrB10 {
+  margin-bottom: 10px !important;
+}
+.main .mrL20 {
+  margin-left: 20px !important;
+}
+.main .color-blue {
+  color: #3384ff;
+}
+@media screen and (max-width: 1600px) {
+  .left-part {
+    width: 190px !important;
+  }
+  .right-part {
+    padding: 20px !important;
+    margin-left: 190px !important;
+  }
+  .right-part .content-wrap {
+    padding: 0 20px !important;
+  }
+  .right-part .content-wrap .brand-select-box .swiper-icon-prev {
+    left: -18px !important;
+  }
+  .right-part .content-wrap .brand-select-box .swiper-icon-next {
+    right: -19px !important;
+  }
+  .right-part .content-wrap .car-table {
+    font-size: 12px !important;
+  }
 }
