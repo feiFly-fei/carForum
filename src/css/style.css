@@ -245,44 +245,6 @@ li {
 .main .right-part .content-wrap .search-box .row .check-btn-box .confirmBtn:focus {
   color: #fff;
 }
-.main .right-part .content-wrap .search-box .row .operate-btn-box {
-  padding: 15px 30px 5px;
-}
-.main .right-part .content-wrap .search-box .row .operate-btn-box .btn {
-  padding: 3px 25px;
-}
-.main .right-part .content-wrap .search-box .row .operate-btn-box .btn .icon {
-  display: inline-block;
-  width: 20px;
-  height: 18px;
-  background-image: url("../images/icon-operate.png");
-  background-repeat: no-repeat;
-  vertical-align: text-top;
-  margin-right: 8px;
-}
-.main .right-part .content-wrap .search-box .row .operate-btn-box .btn .icon.icon-plus {
-  background-position: 2px 0;
-}
-.main .right-part .content-wrap .search-box .row .operate-btn-box .btn .icon.icon-graduate {
-  background-position: -30px -2px;
-}
-.main .right-part .content-wrap .search-box .row .operate-btn-box .btn .icon.icon-delete {
-  background-position: -60px 0;
-}
-.main .right-part .content-wrap .search-box .row .operate-btn-box .btn.active {
-  color: #3384ff;
-  background: transparent;
-  box-shadow: none;
-}
-.main .right-part .content-wrap .search-box .row .operate-btn-box .btn.active .icon-plus {
-  background-position: 2px -29px;
-}
-.main .right-part .content-wrap .search-box .row .operate-btn-box .btn.active .icon-graduate {
-  background-position: -30px -30px;
-}
-.main .right-part .content-wrap .search-box .row .operate-btn-box .btn.active .icon-delete {
-  background-position: -60px -29px;
-}
 .main .right-part .content-wrap .search-box .row.special .text {
   height: 99px;
   line-height: 30px;
@@ -306,20 +268,20 @@ li {
 .main .right-part .content-wrap .search-box .search-list.more-list {
   padding-right: 140px;
 }
-.main .right-part .content-wrap .search-box .search-list li {
+.main .right-part .content-wrap .search-box .search-list > li {
   display: inline-block;
   cursor: pointer;
   margin: auto 15px;
   padding: 15px;
 }
-.main .right-part .content-wrap .search-box .search-list li.date-li {
+.main .right-part .content-wrap .search-box .search-list > li.date-li {
   padding: 0;
   display: none;
 }
-.main .right-part .content-wrap .search-box .search-list li.selected {
+.main .right-part .content-wrap .search-box .search-list > li.selected {
   color: #3384ff;
 }
-.main .right-part .content-wrap .search-box .search-list li > div.search-checkbox {
+.main .right-part .content-wrap .search-box .search-list > li > div.search-checkbox {
   display: none;
   margin-right: 5px;
 }
@@ -528,24 +490,79 @@ li {
 .main .color-blue {
   color: #3384ff;
 }
+.main .operate-box {
+  padding: 15px 30px 5px;
+}
+.main .operate-box.small {
+  padding: 0;
+  width: 150px;
+}
+.main .operate-box.small .popover-ul li {
+  margin: 0;
+}
+.main .operate-box .btn {
+  padding: 3px 25px;
+}
+.main .operate-box .icon {
+  display: inline-block;
+  width: 20px;
+  height: 18px;
+  background-image: url("../images/icon-operate.png");
+  background-repeat: no-repeat;
+  vertical-align: text-top;
+  margin-right: 8px;
+}
+.main .operate-box .icon.icon-plus {
+  background-position: 2px 0;
+}
+.main .operate-box .icon.icon-graduate {
+  background-position: -30px -2px;
+}
+.main .operate-box .icon.icon-delete {
+  background-position: -60px 0;
+}
+.main .operate-box .icon.icon-fresh {
+  background-position: -90px 1px;
+}
+.main .operate-box .selected {
+  color: #3384ff;
+  background: transparent;
+  box-shadow: none;
+}
+.main .operate-box .selected .icon-plus {
+  background-position: 2px -29px;
+}
+.main .operate-box .selected .icon-graduate {
+  background-position: -30px -30px;
+}
+.main .operate-box .selected .icon-delete {
+  background-position: -60px -29px;
+}
+.main .operate-box .selected .icon-fresh {
+  background-position: -90px -28px;
+}
+.main .operate-box .popover-ul li {
+  line-height: 30px;
+  cursor: pointer;
+}
 @media screen and (max-width: 1600px) {
-  .left-part {
-    width: 190px !important;
+  .main .left-part {
+    width: 180px;
   }
-  .right-part {
-    padding: 20px !important;
-    margin-left: 190px !important;
+  .main .right-part {
+    padding: 15px;
+    margin-left: 180px;
   }
-  .right-part .content-wrap {
-    padding: 0 20px !important;
+  .main .right-part .content-wrap {
+    padding: 0 20px;
   }
-  .right-part .content-wrap .brand-select-box .swiper-icon-prev {
-    left: -18px !important;
+  .main .right-part .content-wrap .brand-select-box .swiper-icon-prev {
+    left: -18px;
   }
-  .right-part .content-wrap .brand-select-box .swiper-icon-next {
-    right: -19px !important;
+  .main .right-part .content-wrap .brand-select-box .swiper-icon-next {
+    right: -19px;
   }
-  .right-part .content-wrap .car-table {
-    font-size: 12px !important;
+  .main .right-part .content-wrap .car-table {
+    font-size: 14px;
   }
 }

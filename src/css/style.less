@@ -283,54 +283,6 @@ ul, li{
             }
           }
 
-          .operate-btn-box{
-            padding: 15px 30px 5px;
-
-            .btn{
-              padding: 3px 25px;
-
-              .icon{
-                display: inline-block;
-                width: 20px;
-                height: 18px;
-                background-image: url("../images/icon-operate.png");
-                background-repeat:no-repeat;
-                vertical-align: text-top;
-                margin-right: 8px;
-
-                &.icon-plus{
-                  background-position: 2px 0;
-                }
-
-                &.icon-graduate{
-                  background-position: -30px -2px;
-                }
-
-                &.icon-delete{
-                  background-position: -60px 0;
-                }
-              }
-
-              &.active{
-                color: @color-blue;
-                background: transparent;
-                box-shadow: none;
-
-                .icon-plus{
-                  background-position: 2px -29px;
-                }
-
-                .icon-graduate{
-                  background-position: -30px -30px;
-                }
-
-                .icon-delete{
-                  background-position: -60px -29px;
-                }
-              }
-            }
-          }
-
           &.special{
             .text{
               height: 99px;
@@ -362,7 +314,7 @@ ul, li{
             padding-right: 140px;
           }
 
-          li{
+          &>li{
             display: inline-block;
             cursor: pointer;
             margin: auto 15px;
@@ -655,6 +607,80 @@ ul, li{
   
   .color-blue{
     color: @color-blue;
+  }
+
+  .operate-box{
+    padding: 15px 30px 5px;
+
+    &.small{
+      padding:0;
+      width: 150px;
+
+      .popover-ul{
+        li{
+          margin: 0;
+        }
+      }
+    }
+
+    .btn{
+      padding: 3px 25px;
+    }
+
+    .icon{
+      display: inline-block;
+      width: 20px;
+      height: 18px;
+      background-image: url("../images/icon-operate.png");
+      background-repeat:no-repeat;
+      vertical-align: text-top;
+      margin-right: 8px;
+
+      &.icon-plus{
+        background-position: 2px 0;
+      }
+
+      &.icon-graduate{
+        background-position: -30px -2px;
+      }
+
+      &.icon-delete{
+        background-position: -60px 0;
+      }
+
+      &.icon-fresh{
+        background-position: -90px 1px;
+      }
+    }
+
+    .selected{
+      color: @color-blue;
+      background: transparent;
+      box-shadow: none;
+
+      .icon-plus{
+        background-position: 2px -29px;
+      }
+
+      .icon-graduate{
+        background-position: -30px -30px;
+      }
+
+      .icon-delete{
+        background-position: -60px -29px;
+      }
+
+      .icon-fresh{
+        background-position: -90px -28px;
+      }
+    }
+
+    .popover-ul{
+      li{
+        line-height: 30px;
+        cursor: pointer;
+      }
+    }
   }
 }
 

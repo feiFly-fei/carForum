@@ -57,13 +57,26 @@
                 }
             });
 
-            $('.search-list li').on('hover', function () {
-                console.log(12912)
-                var _this = $(this);
-                _this.popover({
-                    placement: 'right',
-                    content: "<div style='font-size: 23px;'>sdasd</div>"
-                }).popover('show');
+            var _popover = "<div class='car-popover operate-box small'> " +
+                                "<ul class='popover-ul'>" +
+                                    "<li><i class='icon icon-delete'></i>删除论坛</li>"+
+                                    "<li><i class='icon icon-fresh'></i>更新论坛</li>"+
+                                    "<li><i class='icon icon-graduate'></i>改为毕业论坛</li>"+
+                                "</ul>"+
+                            "</div>";
+            $('.special .search-list li').on({
+                'mouseenter': function () {
+                    var _this = $(this);
+                    _this.popover({
+                        placement: 'right',
+                        html: true,
+                        content: _popover
+                     }).popover('show');
+                },
+                'mouseleave': function () {
+                    var _this = $(this);
+                    _this.popover('destroy');
+                }
             });
 
             //更多按钮点击事件
