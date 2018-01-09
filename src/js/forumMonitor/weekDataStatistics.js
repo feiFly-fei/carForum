@@ -64,6 +64,7 @@
                                     "<li><i class='icon icon-graduate'></i>改为毕业论坛</li>"+
                                 "</ul>"+
                             "</div>";
+
             $('.special .search-list li').on({
                 'mouseenter': function () {
                     var _this = $(this);
@@ -71,12 +72,22 @@
                         placement: 'right',
                         html: true,
                         content: _popover
-                     }).popover('show');
-                },
-                'mouseleave': function () {
-                    var _this = $(this);
-                    _this.popover('destroy');
+                     }).popover('show').on('shown.bs.popover', function (e) {
+                        console.log(22222222222)
+                        var popoverId = _this.attr('aria-describedby');
+                        var $popover = $('#' + popoverId);
+                        if($popover.length > 0){
+                            $popover.on('mouseleave', function () {
+                                _this.popover('hide');
+                            });
+                        }
+                    });
                 }
+            });
+
+            $(_popover).on('shown.bs.popover', function () {
+                console.log(1231)
+                // $(this).popover('destroy');
             });
 
             //更多按钮点击事件
