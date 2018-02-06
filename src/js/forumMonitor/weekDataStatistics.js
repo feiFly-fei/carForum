@@ -65,23 +65,23 @@
                                 "</ul>"+
                             "</div>";
 
-            $('.special .search-list li').on({
+            $('.special .search-list li .text').on({
                 'mouseenter': function () {
                     var _this = $(this);
                     _this.popover({
                         placement: 'right',
                         html: true,
                         content: _popover
-                     }).popover('show').on('shown.bs.popover', function (e) {
-                        console.log(22222222222)
-                        var popoverId = _this.attr('aria-describedby');
-                        var $popover = $('#' + popoverId);
-                        if($popover.length > 0){
-                            $popover.on('mouseleave', function () {
-                                _this.popover('hide');
-                            });
-                        }
-                    });
+                     }).popover('show');
+                }
+            });
+
+            $('.special .search-list li').on({
+                'mouseleave': function () {
+                    var $this = $(this);
+                    if($this.find('div.popover').length > 0){
+                        $this.find('.text').popover('destroy');
+                    }
                 }
             });
 
